@@ -1,0 +1,17 @@
+{
+  "name": "mnemoloci",
+  "owner": {
+    "name": "Siris9476"
+  },
+  "metadata": {
+    "description": "Local marketplace for the Mnemoloci plugin"
+  },
+  "plugins": [
+    {
+      "name": "mnemoloci",
+      "source": "./plugin",
+      "description": "Personal second brain for Claude Code: vault, sessions, goals, skills, phone inbox.",
+      "version": "0.16.0"
+    }
+  ]
+}

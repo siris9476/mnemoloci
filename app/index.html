@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#4f7cff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Mnemoloci" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icon-256.png" />
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'; frame-src 'none'" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>Mnemoloci</title>
+  </head>
+  <body>
+    <div id="app">
+      <nav id="nav">
+        <div class="brand">Mnemoloci</div>
+        <a data-view="today">Today <span class="badge" id="badge-today"></span></a>
+        <a data-view="status">Status</a>
+        <a data-view="sources">Sources</a>
+        <a data-view="search">Search</a>
+        <a data-view="graph">Graph</a>
+        <a data-view="people">People</a>
+        <a data-view="review">Review <span class="badge" id="badge-review"></span></a>
+        <a data-view="memory">Memory <span class="badge" id="badge-memory"></span></a>
+        <a data-view="clips">Saved <span class="badge" id="badge-clips"></span></a>
+        <a data-view="answers">Answers <span class="badge" id="badge-answers"></span></a>
+        <a data-view="sessions">Sessions</a>
+        <a data-view="weekly">Week</a>
+        <a data-view="maintain">Maintenance <span class="badge" id="badge-maintain"></span></a>
+        <a data-view="goals">Goals</a>
+        <a data-view="profile">Profile</a>
+        <a data-view="skills">Skills</a>
+        <a data-view="tools">Tools</a>
+        <a data-view="features">Features</a>
+        <a data-view="settings">Settings</a>
+        <a data-view="inbox">Inbox <span class="badge" id="badge-inbox"></span></a>
+        <div class="lang-switch">
+          <select id="lang-select" aria-label="Language">
+            <option value="it" lang="it">Italiano</option>
+            <option value="en" lang="en">English</option>
+          </select>
+        </div>
+      </nav>
+      <main id="main"></main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

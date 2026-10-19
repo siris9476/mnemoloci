@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mnemoloci": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/bin/mnemoloci-run",
+      "args": ["mcp"]
+    }
+  }
+}

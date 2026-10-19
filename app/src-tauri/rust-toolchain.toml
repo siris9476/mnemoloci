@@ -1,0 +1,5 @@
+# Tauri 2's dependencies need Rust >= 1.85 (edition 2024). Pinned here so the
+# machine's default toolchain is left untouched.
+[toolchain]
+channel = "1.90.0"
+profile = "minimal"

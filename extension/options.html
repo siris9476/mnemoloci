@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mnemoloci</title>
+  </head>
+  <body class="wide">
+    <h1 data-i18n="optionsHeading"></h1>
+    <ol class="muted">
+      <li><span data-i18n="step1"></span> <code>python -P -m mnemoloci remote serve</code></li>
+      <li data-i18n="step2"></li>
+      <li data-i18n="step3"></li>
+    </ol>
+    <label><span data-i18n="serverLabel"></span> <input id="server" aria-label="Server" /></label>
+    <label><span data-i18n="codeLabel"></span> <input id="code" placeholder="ABCD-EF23" data-i18n-aria="codeAria" /></label>
+    <label><span data-i18n="nameLabel"></span> <input id="name" data-i18n-aria="nameAria" /></label>
+    <div class="row"><button id="pair" class="primary" data-i18n="pair"></button><button id="forget" data-i18n="forget"></button></div>
+    <p id="status" role="status"></p>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

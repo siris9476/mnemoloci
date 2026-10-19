@@ -1,0 +1,15 @@
+[package]
+name = "mnemoloci-desktop"
+version = "0.1.0"
+edition = "2021"
+description = "Desktop window for Mnemoloci"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["webview-data-url"] }  # the start-up error page
+
+[profile.release]
+strip = true
+lto = true

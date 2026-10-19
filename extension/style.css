@@ -1,0 +1,14 @@
+body { font: 14px/1.5 system-ui, "Segoe UI", sans-serif; width: 320px; margin: 12px; color: #1d2026; }
+body.wide { width: auto; max-width: 520px; margin: 24px auto; }
+h1 { font-size: 16px; margin: 0 0 8px; }
+input { font: inherit; width: 100%; box-sizing: border-box; padding: 6px 8px; border: 1px solid #d0d4da; border-radius: 6px; margin: 4px 0 8px; }
+label { display: block; color: #6b7280; font-size: 13px; }
+label.check { display: flex; gap: 6px; align-items: center; }
+label.check input { width: auto; margin: 0; }
+.row { display: flex; gap: 8px; margin: 8px 0; }
+button { font: inherit; padding: 6px 10px; border-radius: 6px; border: 1px solid #d0d4da; background: #fff; cursor: pointer; }
+button.primary { background: #4f7cff; color: #fff; border-color: #4f7cff; }
+.muted { color: #6b7280; font-size: 12px; }
+.ok { color: #15803d; }
+.error { color: #c2410c; }
+code { background: #f0f2f5; padding: 1px 4px; border-radius: 4px; }

@@ -1,0 +1,9 @@
+{
+  "name": "mnemoloci",
+  "version": "0.16.0",
+  "description": "Personal second brain: compiles your projects, Claude Code sessions and phone screenshots into an Obsidian-compatible vault, tracks profile and goals, finds and creates skills. Deterministic crash-safe engine on native Windows; the LLM work is done by your Claude Code session.",
+  "author": {
+    "name": "Siris9476"
+  },
+  "keywords": ["second-brain", "obsidian", "memory", "knowledge-base", "skills", "windows"]
+}

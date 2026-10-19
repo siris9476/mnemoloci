@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mnemoloci</title>
+  </head>
+  <body>
+    <h1 data-i18n="popupHeading"></h1>
+    <p id="page" class="muted"></p>
+    <input id="note" data-i18n-placeholder="notePlaceholder" data-i18n-aria="noteLabel" />
+    <label class="check"><input id="mine" type="checkbox" /><span data-i18n="mineLabel"></span></label>
+    <div class="row">
+      <button id="save-page" class="primary" data-i18n="savePage"></button>
+      <button id="save-selection" data-i18n="saveSelection"></button>
+    </div>
+    <p id="status" role="status"></p>
+    <p class="muted"><a href="options.html" target="_blank" data-i18n="optionsLink"></a></p>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

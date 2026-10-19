@@ -1,0 +1,21 @@
+#!/bin/sh
+# Mnemoloci plugin launcher for Linux, macOS and Git Bash on Windows (where Claude Code
+# runs hook commands). Finds a Python 3.11+ on PATH and runs launch.py, which then
+# switches to the Python recorded in ~/.mnemoloci/python.txt. Windows programs that
+# start it without a shell use mnemoloci-run.cmd instead.
+here=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+case "$(uname -s 2>/dev/null)" in
+  MINGW*|MSYS*|CYGWIN*) candidates="python python3" ;;
+  *) candidates="python3 python" ;;
+esac
+for py in $candidates; do
+  command -v "$py" >/dev/null 2>&1 || continue
+  if "$py" -c 'import sys; sys.exit(sys.version_info < (3, 11))' >/dev/null 2>&1; then
+    exec "$py" -P "$here/launch.py" "$@"
+  fi
+done
+if command -v py >/dev/null 2>&1 && py -3 -c 'import sys; sys.exit(sys.version_info < (3, 11))' >/dev/null 2>&1; then
+  exec py -3 -P "$here/launch.py" "$@"
+fi
+echo "mnemoloci: no Python 3.11+ found on PATH" >&2
+exit 1

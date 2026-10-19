@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mnemoloci"
+version = "0.16.0"
+description = "Personal second brain: Obsidian-compatible Markdown vault compiled by Claude Code, with a deterministic, crash-safe Python engine."
+requires-python = ">=3.11"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Siris9476" }]
+dependencies = ["pyyaml>=6"]
+
+[project.optional-dependencies]
+mcp = ["mcp>=2.2,<3"]
+semantic = ["fastembed>=0.8", "numpy>=2"]
+ingest = ["pypdf>=5", "youtube-transcript-api>=1.2,<2"]
+ocr = ["pytesseract>=0.3", "pillow>=10"]
+transcribe = ["faster-whisper>=1"]
+codechunk = ["tree-sitter>=0.23", "tree-sitter-language-pack>=0.2"]
+app = ["starlette>=0.40", "uvicorn>=0.30"]  # desktop app, phone access (also pulled in by mcp)
+dev = ["pytest>=8", "mcp>=2.2,<3", "pypdf>=5"]
+
+[project.urls]
+Homepage = "https://github.com/siris9476/mnemoloci"
+Issues = "https://github.com/siris9476/mnemoloci/issues"
+Changelog = "https://github.com/siris9476/mnemoloci/blob/main/CHANGELOG.md"
+
+[project.scripts]
+mnemoloci = "mnemoloci.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mnemoloci*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

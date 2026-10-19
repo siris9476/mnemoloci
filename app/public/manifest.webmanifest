@@ -1,0 +1,14 @@
+{
+  "name": "Mnemoloci",
+  "short_name": "Mnemoloci",
+  "description": "Il tuo second brain personale",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101216",
+  "theme_color": "#4f7cff",
+  "icons": [
+    { "src": "icon-256.png", "sizes": "256x256", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
